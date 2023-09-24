@@ -1,5 +1,12 @@
+// Function to show demerit points or license suspension depending on current speed
+
 const speedDetector = (currentSpeed) => {
+  // Initialized speed limit here
+  
   let speedLimit = 70;
+
+  // Conditions
+
   if (currentSpeed < 70) {
     return "Ok";
   } else if (currentSpeed > 70) {
