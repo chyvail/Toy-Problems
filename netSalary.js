@@ -1,7 +1,6 @@
 // Challenge 3 : Net Salary Calculation
 
 const netSalary = (basicSalary, benefits) => {
-  // PAYE
   let paye = "";
   let nhif = "";
   let nssf = "";
@@ -18,6 +17,7 @@ const netSalary = (basicSalary, benefits) => {
 
   console.log(`This is Housing Levy: ${housingLevy}`);
 
+  // PAYE Calculations
 
   switch (true) {
     case basicSalary <= 24000:
@@ -105,18 +105,20 @@ const netSalary = (basicSalary, benefits) => {
       nhif = 1600;
       break;
     default:
-        nhif = 1700;
-        break;
+      nhif = 1700;
+      break;
   }
 
-  let deductibles = (paye + nssf + nhif + housingLevy);
-  console.log(deductibles)
+  // DEDUCTIBLES
+
+  let deductibles = paye + nssf + nhif + housingLevy;
+  console.log(deductibles);
+
+  // NET SALARY Calculations
 
   let netSalary = grossSalary - deductibles;
 
-  console.log(netSalary)
-
-  
+  console.log(netSalary);
 };
 
 console.log(netSalary(400000, 1000));

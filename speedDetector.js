@@ -1,4 +1,4 @@
-// Function to show demerit points or license suspension depending on current speed
+// Challenge 2: Function to show demerit points or license suspension depending on current speed
 
 const speedDetector = (currentSpeed) => {
   // Initialized speed limit here
