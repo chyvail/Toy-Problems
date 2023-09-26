@@ -112,13 +112,13 @@ const netSalary = (basicSalary, benefits) => {
   // DEDUCTIBLES
 
   let deductibles = paye + nssf + nhif + housingLevy;
-  console.log(deductibles);
+  console.log(`This is the Deductibles: ${deductibles}`);
 
   // NET SALARY Calculations
 
   let netSalary = grossSalary - deductibles;
 
-  console.log(netSalary);
+  console.log(`This is the Net Salary: ${netSalary}`);
 };
 
 console.log(netSalary(400000, 1000));
